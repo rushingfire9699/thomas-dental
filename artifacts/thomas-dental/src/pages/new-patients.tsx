@@ -1,3 +1,5 @@
+import { Link } from "wouter";
+
 export default function NewPatientsPage() {
   return (
     <div className="min-h-screen pt-24 pb-20">
@@ -6,14 +8,14 @@ export default function NewPatientsPage() {
           New Patients
         </h1>
         <p className="text-xl text-navy-700 mb-6">
-          This page is under development. New patient information coming soon.
+          This page is under development. Patient forms and information coming soon.
         </p>
-        <a
+        <Link
           href="/"
           className="inline-flex items-center justify-center px-6 py-3 bg-navy-950 text-off-white font-semibold rounded-lg hover:bg-navy-900 transition-all"
         >
           Back to Home
-        </a>
+        </Link>
       </div>
     </div>
   );

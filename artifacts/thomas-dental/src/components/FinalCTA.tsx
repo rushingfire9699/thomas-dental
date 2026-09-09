@@ -1,28 +1,34 @@
+import Button from './Button';
+
 export default function FinalCTA() {
   return (
-    <section className="py-24 sm:py-32 lg:py-40 bg-navy-950 text-off-white">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="text-5xl sm:text-6xl lg:text-7xl font-serif font-bold mb-6 sm:mb-8 leading-tight">
-          Ready to Experience
-          <br />
-          Dentistry Differently?
+    <section className="relative py-24 sm:py-32 bg-aqua-400 overflow-hidden">
+      {/* Background pattern */}
+      <div className="absolute inset-0 opacity-10">
+         <svg className="h-full w-full" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+               <pattern id="grid-pattern" width="40" height="40" patternUnits="userSpaceOnUse">
+                  <path d="M 40 0 L 0 0 0 40" fill="none" stroke="currentColor" strokeWidth="1"/>
+               </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#grid-pattern)" />
+         </svg>
+      </div>
+
+      <div className="relative z-10 max-w-4xl mx-auto px-6 sm:px-8 lg:px-12 text-center fade-in-up">
+        <h2 className="text-3xl sm:text-5xl font-display font-bold text-navy-950 mb-8 uppercase tracking-wider">
+          Experience the Difference
         </h2>
-        <p className="text-lg sm:text-xl text-navy-100 mb-12 sm:mb-16 max-w-2xl mx-auto leading-relaxed">
-          We look forward to welcoming you to Thomas Dental.
+        <p className="text-lg sm:text-xl text-navy-900 mb-12 font-sans font-light max-w-2xl mx-auto leading-relaxed">
+          Schedule your comprehensive consultation and discover a new standard of dental care.
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a
-            href="/contact"
-            className="inline-flex items-center justify-center px-8 py-4 bg-off-white text-navy-950 font-semibold rounded-lg hover:bg-navy-100 transition-all duration-200 tracking-wide"
-          >
-            Request an Appointment
-          </a>
-          <a
-            href="tel:+15615551234"
-            className="inline-flex items-center justify-center px-8 py-4 bg-transparent border-2 border-off-white text-off-white font-semibold rounded-lg hover:bg-off-white hover:text-navy-950 transition-all duration-200 tracking-wide"
-          >
-            Call Our Office
-          </a>
+        <div className="flex flex-col sm:flex-row gap-6 justify-center">
+          <Button href="/contact" variant="primary" size="lg">
+            REQUEST APPOINTMENT
+          </Button>
+          <Button href="tel:+15615551234" variant="outline" size="lg">
+            CALL (561) 555-1234
+          </Button>
         </div>
       </div>
     </section>

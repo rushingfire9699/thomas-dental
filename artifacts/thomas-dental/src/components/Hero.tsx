@@ -1,3 +1,5 @@
+import { Link } from "wouter";
+
 interface HeroProps {
   title: string;
   subtitle: string;
@@ -14,60 +16,60 @@ export default function Hero({
   imageSrc,
 }: HeroProps) {
   return (
-    <section className="relative w-full h-screen min-h-[600px] flex items-center justify-center overflow-hidden pt-20 bg-navy-950">
-      {/* Background Image */}
-      {imageSrc ? (
-        <div
-          className="absolute inset-0 bg-cover bg-center opacity-40"
-          style={{ backgroundImage: `url(${imageSrc})` }}
-          role="img"
-          aria-label="Hero background"
-        />
-      ) : (
-        <div className="absolute inset-0 bg-gradient-to-br from-navy-900 via-navy-950 to-navy-900" />
-      )}
+    <section className="relative w-full h-[100svh] min-h-[700px] flex items-center justify-center overflow-hidden bg-navy-950 pt-20">
+      {/* Abstract wave/sun pattern background - subtle, geometric */}
+      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+        <div className="absolute -top-[20%] -right-[10%] w-[70%] h-[70%] rounded-full border-[1px] border-aqua-900/30 opacity-20 blur-[1px]" />
+        <div className="absolute top-[10%] -right-[5%] w-[50%] h-[50%] rounded-full border-[1px] border-sunrise-900/20 opacity-20 blur-[1px]" />
+        
+        {/* If we have an image, it overlays the pattern but keeps the navy tint */}
+        {imageSrc && (
+          <div className="absolute inset-0 z-10">
+            <div
+              className="absolute inset-0 bg-cover bg-center mix-blend-overlay opacity-30"
+              style={{ backgroundImage: `url(${imageSrc})` }}
+              role="img"
+              aria-label="Hero background"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/80 to-navy-950/40" />
+          </div>
+        )}
+      </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center fade-in-up">
-        <h1 className="text-5xl sm:text-6xl lg:text-7xl font-serif font-bold text-off-white mb-6 leading-tight tracking-tight">
+      <div className="relative z-20 max-w-5xl mx-auto px-6 sm:px-8 lg:px-12 flex flex-col items-center text-center fade-in-up">
+        <h1 className="text-4xl sm:text-5xl lg:text-7xl font-display font-bold text-white mb-8 leading-[1.1] tracking-wider uppercase">
           {title}
         </h1>
-        <p className="text-lg sm:text-xl text-navy-100 mb-10 max-w-2xl mx-auto leading-relaxed">
+        
+        <div className="w-24 h-1 bg-sunrise-400 mb-8 mx-auto" />
+        
+        <p className="text-lg sm:text-xl text-navy-200 mb-12 max-w-2xl mx-auto font-sans font-light tracking-wide leading-relaxed">
           {subtitle}
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a
+        
+        <div className="flex flex-col sm:flex-row gap-6 justify-center w-full sm:w-auto">
+          <Link
             href={primaryCTA.href}
-            className="inline-flex items-center justify-center px-8 py-4 bg-off-white text-navy-950 font-semibold rounded-lg hover:bg-navy-100 transition-all duration-200 tracking-wide"
+            className="inline-flex items-center justify-center px-10 py-5 bg-sunrise-400 text-navy-950 font-display font-bold uppercase tracking-[0.2em] text-sm hover:bg-sunrise-300 transition-all duration-300 rounded-none shadow-[4px_4px_0px_0px_rgba(255,255,255,0.1)] hover:shadow-[2px_2px_0px_0px_rgba(255,255,255,0.1)] hover:translate-y-[2px] hover:translate-x-[2px]"
           >
             {primaryCTA.label}
-          </a>
+          </Link>
           {secondaryCTA && (
-            <a
+            <Link
               href={secondaryCTA.href}
-              className="inline-flex items-center justify-center px-8 py-4 bg-transparent border-2 border-off-white text-off-white font-semibold rounded-lg hover:bg-off-white hover:text-navy-950 transition-all duration-200 tracking-wide"
+              className="inline-flex items-center justify-center px-10 py-5 bg-transparent border-2 border-aqua-400 text-aqua-400 font-display font-bold uppercase tracking-[0.2em] text-sm hover:bg-aqua-400 hover:text-navy-950 transition-all duration-300 rounded-none"
             >
               {secondaryCTA.label}
-            </a>
+            </Link>
           )}
         </div>
       </div>
 
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <svg
-          className="w-6 h-6 text-off-white opacity-60"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M19 14l-7 7m0 0l-7-7m7 7V3"
-          />
-        </svg>
+      {/* Geometric Scroll Indicator */}
+      <div className="absolute bottom-12 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 animate-bounce sm:flex">
+        <span className="text-[10px] font-display uppercase tracking-[0.3em] text-navy-300">Scroll</span>
+        <div className="w-[1px] h-12 bg-gradient-to-b from-navy-300 to-transparent" />
       </div>
     </section>
   );

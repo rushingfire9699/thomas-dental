@@ -1,6 +1,6 @@
-# [Project name]
+# Thomas Dental
 
-_Replace the heading above with the project's name, and this line with one sentence describing what this app does for users._
+A patient-facing website for Thomas Dental in Boca Raton, presenting the practice, services, new-patient process, location, and contact information.
 
 ## Run & Operate
 
@@ -22,19 +22,25 @@ _Replace the heading above with the project's name, and this line with one sente
 
 ## Where things live
 
-_Populate as you build — short repo map plus pointers to the source-of-truth file for DB schema, API contracts, theme files, etc._
+- Web app: `artifacts/thomas-dental/`
+- Brand palette and typography: `artifacts/thomas-dental/tailwind.config.ts` and `src/index.css`
+- Approved logo artwork: `artifacts/thomas-dental/public/thomas-dental-brand-card.png`
+- Source branding reference: `attached_assets/Thomas_Dental_Front_Card_1788930295513.pdf`
 
 ## Architecture decisions
 
-_Populate as you build — non-obvious choices a reader couldn't infer from the code (3-5 bullets)._
+- The website is a frontend-only React + Vite artifact; the shared API server is not part of its current flows.
+- The supplied Thomas Dental branding card is the primary visual reference.
+- Use the supplied logo artwork directly; never redraw, reinterpret, or redesign it.
 
 ## Product
 
-_Describe the high-level user-facing capabilities of this app once they exist._
+- Visitors can browse the practice overview, services, new-patient guidance, contact details, privacy policy, and accessibility page.
 
 ## User preferences
 
-_Populate as you build — explicit user instructions worth remembering across sessions._
+- Match typography, navy/aqua/gold palette, spacing, and overall visual character to the supplied branding reference.
+- Do not redesign the Thomas Dental logo.
 
 ## Gotchas
 

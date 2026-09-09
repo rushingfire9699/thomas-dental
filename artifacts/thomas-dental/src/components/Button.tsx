@@ -1,11 +1,11 @@
-import Link from 'next/link';
+import { Link } from 'wouter';
 import { ReactNode } from 'react';
 
 interface ButtonProps {
   href?: string;
   onClick?: () => void;
   children: ReactNode;
-  variant?: 'primary' | 'secondary' | 'ghost';
+  variant?: 'primary' | 'secondary' | 'ghost' | 'outline';
   size?: 'sm' | 'md' | 'lg';
   fullWidth?: boolean;
   className?: string;
@@ -24,22 +24,25 @@ export default function Button({
   type = 'button',
   external = false,
 }: ButtonProps) {
+  // crisp, geometric, high-contrast buttons
   const baseStyles =
-    'inline-flex items-center justify-center font-medium tracking-wide transition-all duration-200 rounded-lg focus-visible:outline-2 focus-visible:outline-offset-2';
+    'inline-flex items-center justify-center font-display font-semibold uppercase tracking-[0.15em] transition-all duration-300 rounded-none focus-visible:outline-2 focus-visible:outline-offset-2';
 
   const variants = {
     primary:
-      'bg-navy-950 text-off-white hover:bg-navy-900 active:bg-navy-900 focus-visible:outline-navy-600',
+      'bg-sunrise-400 text-navy-950 hover:bg-sunrise-300 active:bg-sunrise-500 focus-visible:outline-sunrise-500 shadow-[4px_4px_0px_0px_rgba(11,25,44,1)] hover:shadow-[2px_2px_0px_0px_rgba(11,25,44,1)] hover:translate-y-[2px] hover:translate-x-[2px]',
     secondary:
-      'bg-light-blue-gray text-navy-950 hover:bg-navy-200 active:bg-navy-200 focus-visible:outline-navy-600',
+      'bg-aqua-400 text-navy-950 hover:bg-aqua-300 active:bg-aqua-500 focus-visible:outline-aqua-500 shadow-[4px_4px_0px_0px_rgba(11,25,44,1)] hover:shadow-[2px_2px_0px_0px_rgba(11,25,44,1)] hover:translate-y-[2px] hover:translate-x-[2px]',
+    outline:
+      'border-2 border-navy-950 text-navy-950 hover:bg-navy-950 hover:text-white active:bg-navy-900 focus-visible:outline-navy-950',
     ghost:
-      'text-navy-950 border border-navy-950 hover:bg-navy-50 active:bg-navy-100 focus-visible:outline-navy-600',
+      'text-navy-950 hover:bg-navy-50 active:bg-navy-100 focus-visible:outline-navy-950',
   };
 
   const sizes = {
-    sm: 'px-5 py-2 text-sm',
-    md: 'px-7 py-3 text-base',
-    lg: 'px-8 py-4 text-lg',
+    sm: 'px-6 py-3 text-xs',
+    md: 'px-8 py-4 text-sm',
+    lg: 'px-10 py-5 text-base',
   };
 
   const widthClass = fullWidth ? 'w-full' : '';

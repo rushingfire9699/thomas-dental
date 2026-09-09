@@ -1,4 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 * {
   margin: 0;
@@ -12,15 +16,16 @@ html {
 
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  background-color: #faf9f6;
-  color: #16364a;
+  background-color: #f5f5f5; /* clean off-white */
+  color: #0b192c; /* Deep ink navy */
   line-height: 1.6;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'DM Serif Display', Georgia, serif;
-  font-weight: 400;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
   line-height: 1.2;
+  letter-spacing: 0.05em; /* deliberate wide letter-spacing */
 }
 
 a {
@@ -64,7 +69,7 @@ button {
 
 /* Focus states for accessibility */
 *:focus-visible {
-  outline: 2px solid #527c91;
+  outline: 2px solid #5ab0c6; /* pale aqua wave accent */
   outline-offset: 2px;
 }
 
@@ -88,14 +93,14 @@ button {
 }
 
 ::-webkit-scrollbar-track {
-  background: #faf9f6;
+  background: #fcfbf8;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #dce5e8;
-  border-radius: 4px;
+  background: #d5e0ec;
+  border-radius: 0; /* restrained geometry */
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #b8cad4;
+  background: #adbed5;
 }

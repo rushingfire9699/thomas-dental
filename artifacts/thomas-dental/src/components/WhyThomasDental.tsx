@@ -1,44 +1,55 @@
+import SectionHeader from './SectionHeader';
+
 export default function WhyThomasDental() {
   const features = [
     {
-      title: 'Personal Attention',
-      description: 'We take the time to understand your goals and concerns.',
+      title: 'Unyielding Standards',
+      description: 'We never compromise on materials, techniques, or time. Every procedure is performed to the highest possible standard of clinical excellence.',
+      number: '01'
     },
     {
-      title: 'Thoughtful Treatment',
-      description: 'Recommendations are individualized, understandable, and appropriate.',
+      title: 'Tranquil Environment',
+      description: 'Our practice was deliberately designed to reduce clinical anxiety. From the lighting to the pacing of appointments, calmness is engineered into the experience.',
+      number: '02'
     },
     {
-      title: 'Modern Dentistry',
-      description: 'Contemporary techniques support predictable and comfortable care.',
+      title: 'Conservative Approach',
+      description: 'We prioritize preserving your natural tooth structure. We will never recommend a complex procedure if a simpler, more conservative option exists.',
+      number: '03'
     },
     {
-      title: 'Relaxed Environment',
-      description: 'A quiet, private setting designed to make dental visits feel less clinical.',
-    },
+      title: 'Absolute Transparency',
+      description: 'Clear communication regarding diagnoses, treatment options, and costs. No surprises, just collaborative decision-making.',
+      number: '04'
+    }
   ];
 
   return (
-    <section className="py-20 sm:py-28 lg:py-32 bg-navy-950 text-off-white">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="mb-16 sm:mb-20">
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold leading-tight">
-            A Different Kind of
-            <br />
-            Dental Experience.
-          </h2>
-        </div>
+    <section className="py-24 sm:py-32 bg-off-white">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+        <SectionHeader
+          title="The Thomas Difference"
+          subtitle="Why discerning patients choose our practice."
+        />
 
-        {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12 mt-16">
           {features.map((feature, index) => (
-            <div key={index} className="space-y-3">
-              <h3 className="text-xl font-serif font-bold tracking-wide">
-                {feature.title.toUpperCase()}
-              </h3>
-              <p className="text-navy-200 leading-relaxed">
-                {feature.description}
-              </p>
+            <div 
+              key={index} 
+              className="flex gap-6 items-start fade-in-up group"
+              style={{ animationDelay: `${index * 0.1}s` }}
+            >
+              <div className="text-4xl font-display font-bold text-light-blue-gray group-hover:text-aqua-400 transition-colors duration-300">
+                {feature.number}
+              </div>
+              <div>
+                <h3 className="text-xl font-display font-bold text-navy-950 mb-3 tracking-wide uppercase">
+                  {feature.title}
+                </h3>
+                <p className="text-navy-600 font-sans font-light leading-relaxed">
+                  {feature.description}
+                </p>
+              </div>
             </div>
           ))}
         </div>

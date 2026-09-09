@@ -1,7 +1,5 @@
-'use client';
-
 import { useState, useEffect } from 'react';
-import Link from 'next/link';
+import { Link } from 'wouter';
 import Button from './Button';
 
 export default function Navigation() {
@@ -30,45 +28,47 @@ export default function Navigation() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-white shadow-sm'
-          : 'bg-transparent'
+          ? 'bg-navy-950 shadow-md py-2'
+          : 'bg-navy-950 py-4'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <Link href="/" className="flex-shrink-0">
-            <div className="text-2xl font-serif font-bold text-navy-950 tracking-tight">
-              Thomas Dental
-            </div>
+          <Link href="/" className="flex-shrink-0 flex items-center">
+            <img 
+              src="/thomas-dental-logo-transparent.png" 
+              alt="Thomas Dental" 
+              className="h-14 md:h-16 w-auto object-contain"
+            />
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-12">
+          <div className="hidden md:flex items-center gap-10">
             {navigationLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium text-navy-950 hover:text-navy-600 transition-colors duration-200 tracking-wide"
+                className="text-xs font-semibold text-white hover:text-sunrise-400 transition-colors duration-300 tracking-[0.2em] uppercase"
               >
                 {link.label}
               </Link>
             ))}
             <a
               href="tel:+15615551234"
-              className="text-sm font-medium text-navy-600 hover:text-navy-950 transition-colors duration-200"
+              className="text-xs font-semibold text-aqua-400 hover:text-white transition-colors duration-300 tracking-wider"
             >
               (561) 555-1234
             </a>
             <Button href="/contact" variant="primary" size="sm">
-              REQUEST AN APPOINTMENT
+              REQUEST APPOINTMENT
             </Button>
           </div>
 
           {/* Mobile Menu Button */}
           <button
             onClick={toggleMenu}
-            className="md:hidden p-2 rounded-lg hover:bg-navy-50 transition-colors"
+            className="md:hidden p-2 text-white hover:text-sunrise-400 transition-colors"
             aria-label="Toggle menu"
           >
             <svg
@@ -99,13 +99,13 @@ export default function Navigation() {
 
       {/* Mobile Navigation */}
       {isOpen && (
-        <div className="md:hidden bg-white border-t border-light-blue-gray animate-in fade-in slide-in-from-top-2">
-          <div className="px-4 pt-2 pb-4 space-y-1">
+        <div className="md:hidden bg-navy-900 border-t border-navy-800 animate-in fade-in slide-in-from-top-2">
+          <div className="px-6 pt-4 pb-6 space-y-4">
             {navigationLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="block px-3 py-2 text-sm font-medium text-navy-950 hover:bg-navy-50 rounded-md transition-colors"
+                className="block px-3 py-3 text-xs font-semibold text-white tracking-[0.2em] uppercase hover:bg-navy-800 hover:text-sunrise-400 transition-colors"
                 onClick={() => setIsOpen(false)}
               >
                 {link.label}
@@ -113,13 +113,13 @@ export default function Navigation() {
             ))}
             <a
               href="tel:+15615551234"
-              className="block px-3 py-2 text-sm font-medium text-navy-600 hover:bg-navy-50 rounded-md transition-colors"
+              className="block px-3 py-3 text-sm font-semibold text-aqua-400 tracking-wider hover:bg-navy-800 transition-colors"
             >
               (561) 555-1234
             </a>
-            <div className="px-3 py-2">
-              <Button href="/contact" variant="primary" size="sm" fullWidth>
-                REQUEST AN APPOINTMENT
+            <div className="px-3 pt-4">
+              <Button href="/contact" variant="primary" size="md" fullWidth>
+                REQUEST APPOINTMENT
               </Button>
             </div>
           </div>

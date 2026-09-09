@@ -1,61 +1,54 @@
+import SectionHeader from './SectionHeader';
+
 export default function NewPatientProcess() {
   const steps = [
     {
-      number: '01',
-      title: 'Request an Appointment',
-      description: 'Schedule your visit at your convenience.',
+      title: 'Initial Consultation',
+      description: 'A comprehensive evaluation of your oral health, including digital imaging and a thorough discussion of your goals and concerns.',
     },
     {
-      number: '02',
-      title: 'Complete Your Forms',
-      description: 'Provide your health history and insurance information.',
+      title: 'Custom Treatment Plan',
+      description: 'We develop a tailored approach, outlining all available options, timelines, and costs with complete transparency.',
     },
     {
-      number: '03',
-      title: 'Meet Your Dental Team',
-      description: 'Get to know our caring, professional staff.',
+      title: 'Execution & Care',
+      description: 'Precise, comfortable treatment delivery utilizing state-of-the-art technology and evidence-based techniques.',
     },
     {
-      number: '04',
-      title: 'Create Your Personalized Plan',
-      description: 'Discuss your goals and receive tailored recommendations.',
-    },
+      title: 'Maintenance',
+      description: 'Ongoing preventive care designed to protect your investment and maintain optimal health for a lifetime.',
+    }
   ];
 
   return (
-    <section className="py-20 sm:py-28 lg:py-32 bg-off-white">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="mb-16 sm:mb-20">
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-navy-950 leading-tight">
-            Your First Visit
-          </h2>
-        </div>
+    <section className="py-24 sm:py-32 bg-navy-950 text-white relative">
+       {/* Background structural elements */}
+       <div className="absolute left-0 top-1/2 -translate-y-1/2 w-full h-[1px] bg-navy-800 hidden md:block"></div>
 
-        {/* Steps Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6 mb-12 sm:mb-16">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
+        <SectionHeader
+          title="The Patient Journey"
+          light
+        />
+
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mt-16">
           {steps.map((step, index) => (
-            <div key={index} className="space-y-4">
-              <div className="text-4xl sm:text-5xl font-serif font-bold text-navy-200">
-                {step.number}
+            <div 
+              key={index} 
+              className="relative fade-in-up"
+              style={{ animationDelay: `${index * 0.15}s` }}
+            >
+              <div className="w-12 h-12 bg-navy-900 border border-aqua-400 text-aqua-400 font-display font-bold flex items-center justify-center mb-8 mx-auto md:mx-0 relative z-10 shadow-[0_0_15px_rgba(90,176,198,0.2)]">
+                {index + 1}
               </div>
-              <h3 className="text-xl font-serif font-bold text-navy-950">
+              <h3 className="text-lg font-display font-bold mb-4 tracking-wide uppercase text-center md:text-left text-sunrise-400">
                 {step.title}
               </h3>
-              <p className="text-navy-600 leading-relaxed">
+              <p className="text-navy-200 font-sans font-light leading-relaxed text-center md:text-left text-sm">
                 {step.description}
               </p>
             </div>
           ))}
-        </div>
-
-        {/* CTA */}
-        <div className="text-center">
-          <a
-            href="/new-patients"
-            className="inline-flex items-center justify-center px-8 py-4 bg-navy-950 text-off-white font-semibold rounded-lg hover:bg-navy-900 transition-all duration-200 tracking-wide"
-          >
-            Become a Patient
-          </a>
         </div>
       </div>
     </section>

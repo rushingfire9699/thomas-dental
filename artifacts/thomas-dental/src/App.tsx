@@ -1,30 +1,32 @@
-import Hero from '@/components/Hero';
-import BrandIntroduction from '@/components/BrandIntroduction';
-import MeetDrThomas from '@/components/MeetDrThomas';
-import Services from '@/components/Services';
-import WhyThomasDental from '@/components/WhyThomasDental';
-import LocationSection from '@/components/LocationSection';
-import PatientReviews from '@/components/PatientReviews';
-import NewPatientProcess from '@/components/NewPatientProcess';
-import FinalCTA from '@/components/FinalCTA';
+import { Switch, Route } from "wouter";
+import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
+import Home from "@/pages/home";
+import AboutPage from "@/pages/about";
+import ServicesPage from "@/pages/services";
+import NewPatientsPage from "@/pages/new-patients";
+import ContactPage from "@/pages/contact";
+import PrivacyPage from "@/pages/privacy";
+import AccessibilityPage from "@/pages/accessibility";
+import NotFoundPage from "@/pages/not-found";
 
-export default function HomePage() {
+export default function App() {
   return (
-    <>
-      <Hero
-        title="Personalized Dentistry. Thoughtfully Delivered."
-        subtitle="Thomas Dental provides comprehensive dental care in a relaxed, personalized setting in Boca Raton, Florida."
-        primaryCTA={{ label: 'REQUEST AN APPOINTMENT', href: '/contact' }}
-        secondaryCTA={{ label: 'MEET DR. THOMAS', href: '/about' }}
-      />
-      <BrandIntroduction />
-      <MeetDrThomas />
-      <Services />
-      <WhyThomasDental />
-      <LocationSection />
-      <PatientReviews />
-      <NewPatientProcess />
-      <FinalCTA />
-    </>
+    <div className="flex flex-col min-h-screen">
+      <Navigation />
+      <main className="flex-grow">
+        <Switch>
+          <Route path="/" component={Home} />
+          <Route path="/about" component={AboutPage} />
+          <Route path="/services" component={ServicesPage} />
+          <Route path="/new-patients" component={NewPatientsPage} />
+          <Route path="/contact" component={ContactPage} />
+          <Route path="/privacy" component={PrivacyPage} />
+          <Route path="/accessibility" component={AccessibilityPage} />
+          <Route component={NotFoundPage} />
+        </Switch>
+      </main>
+      <Footer />
+    </div>
   );
 }
