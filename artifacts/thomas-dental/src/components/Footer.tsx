@@ -59,20 +59,20 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Practice - Span 3 */}
+          {/* Hours - Span 3 */}
           <div className="md:col-span-3">
             <h4 className="text-sm font-display font-bold uppercase tracking-[0.2em] text-aqua-400 mb-8 flex items-center gap-4">
               <span className="w-8 h-[1px] bg-aqua-400 block"></span>
-              Practice
+              Office Hours
             </h4>
             <ul className="space-y-6 text-sm font-sans font-light text-navy-100">
               <li>
-                <span className="block text-white font-medium mb-1 uppercase tracking-wider text-xs">Dentist</span>
-                {practiceInfo.doctor}
+                <span className="block text-white font-medium mb-1 uppercase tracking-wider text-xs">Monday – Thursday</span>
+                8:00 AM – 4:00 PM
               </li>
               <li>
-                <span className="block text-white font-medium mb-1 uppercase tracking-wider text-xs">Specialty</span>
-                {practiceInfo.specialty}
+                <span className="block text-white font-medium mb-1 uppercase tracking-wider text-xs">Friday</span>
+                8:00 AM – 12:00 PM
               </li>
               <li>
                 <a

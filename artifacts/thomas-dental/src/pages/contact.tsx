@@ -34,6 +34,13 @@ export default function ContactPage() {
               <p className="mb-2 text-xs font-bold uppercase tracking-[0.2em] text-sunrise-400">Website</p>
               <a className="text-lg hover:text-aqua-400" href={practiceInfo.websiteHref} target="_blank" rel="noopener noreferrer">{practiceInfo.website}</a>
             </div>
+            <div>
+              <p className="mb-2 text-xs font-bold uppercase tracking-[0.2em] text-sunrise-400">Office Hours</p>
+              <p className="text-lg leading-relaxed">
+                {practiceInfo.weekdayHours}<br />
+                {practiceInfo.fridayHours}
+              </p>
+            </div>
             <Link href="/" className="inline-flex border-b border-aqua-400 pb-1 text-xs font-bold uppercase tracking-[0.2em] text-aqua-400 hover:text-white">
               Back to Home
             </Link>

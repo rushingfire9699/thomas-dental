@@ -37,10 +37,10 @@ export default function LocationSection() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
                 <div>
-                  <h4 className="font-display font-bold text-navy-950 uppercase tracking-widest text-sm mb-1">Contact</h4>
+                  <h4 className="font-display font-bold text-navy-950 uppercase tracking-widest text-sm mb-1">Office Hours</h4>
                   <p className="text-navy-600 font-sans text-sm leading-relaxed">
-                    <a className="hover:text-navy-950" href={practiceInfo.phoneHref}>{practiceInfo.phoneDisplay}</a><br />
-                    <a className="hover:text-navy-950" href={`mailto:${practiceInfo.email}`}>{practiceInfo.email}</a>
+                    {practiceInfo.weekdayHours}<br />
+                    {practiceInfo.fridayHours}
                   </p>
                 </div>
               </div>
