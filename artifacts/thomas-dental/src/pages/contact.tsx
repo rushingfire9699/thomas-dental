@@ -1,4 +1,5 @@
 import { Link } from "wouter";
+import ContactForm from "@/components/ContactForm";
 import PracticeMap from "@/components/PracticeMap";
 import { practiceInfo } from "@/lib/practice-info";
 
@@ -15,6 +16,8 @@ export default function ContactPage() {
         <p className="max-w-2xl text-xl text-navy-700 mb-14 font-light">
           {practiceInfo.tagline}
         </p>
+
+        <ContactForm />
 
         <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
           <div className="space-y-8 bg-navy-950 p-8 text-white sm:p-10">
