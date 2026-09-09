@@ -31,7 +31,7 @@ export default function AboutPage() {
           <div className="relative mx-auto w-full max-w-md">
             <div className="overflow-hidden border-8 border-white bg-aqua-100 shadow-xl">
               <img
-                src="/dr-chase-thomas-enhanced.jpg"
+                src="/dr-chase-thomas-bio.jpg"
                 alt="Dr. Chase Thomas"
                 className="aspect-[4/5] w-full object-cover object-center"
               />
