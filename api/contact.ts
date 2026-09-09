@@ -28,8 +28,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   try {
     await sendContactEmail(payload);
     res.status(200).json({ ok: true });
-  } catch (error) {
-    console.error('Contact form submission failed', error);
+  } catch {
     res.status(500).json({ error: 'We could not send your message right now.' });
   }
 }
