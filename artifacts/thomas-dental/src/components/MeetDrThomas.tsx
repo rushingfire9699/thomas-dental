@@ -9,7 +9,7 @@ export default function MeetDrThomas() {
           <div className="lg:col-span-5 relative fade-in-up">
             <div className="aspect-[3/4] bg-navy-50 relative overflow-hidden shadow-xl border border-light-blue-gray">
               <img
-                src="/dr-chase-thomas.jpg"
+                src="/dr-chase-thomas-enhanced.jpg"
                 alt="Dr. Chase Thomas"
                 className="h-full w-full object-cover object-center"
               />
