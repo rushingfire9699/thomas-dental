@@ -13,7 +13,7 @@ export default function Home() {
     <>
       <Hero
         title="Thoughtful dentistry. A more relaxed way to smile."
-        subtitle="General and cosmetic dentistry in a calm Boca Raton setting—personalized care with a little more ease."
+        subtitle="We’re here to make your next visit feel easy."
         primaryCTA={{ label: 'REQUEST AN APPOINTMENT', href: '/contact' }}
         secondaryCTA={{ label: 'MEET DR. THOMAS', href: '/about' }}
         imageSrc="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=85&w=2200&auto=format&fit=crop"
