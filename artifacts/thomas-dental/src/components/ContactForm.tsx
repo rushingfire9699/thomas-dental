@@ -38,7 +38,14 @@ export default function ContactForm() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(values),
       });
-      const result = (await response.json()) as { error?: string };
+      const responseText = await response.text();
+      let result: { error?: string } = {};
+
+      try {
+        result = JSON.parse(responseText) as { error?: string };
+      } catch {
+        // Keep the visitor-facing error friendly if the platform returns plain text.
+      }
 
       if (!response.ok) {
         throw new Error(result.error || 'We could not send your message right now.');
