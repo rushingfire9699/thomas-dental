@@ -23,6 +23,9 @@ export default function FinalCTA() {
         <p className="text-lg sm:text-xl text-navy-900 mb-12 font-sans font-light max-w-2xl mx-auto leading-relaxed">
           Schedule your comprehensive consultation and discover a new standard of dental care.
         </p>
+        <p className="mb-10 font-display text-xs font-bold uppercase tracking-[0.2em] text-navy-800">
+          Complimentary second opinions are always welcome.
+        </p>
         <div className="flex flex-col sm:flex-row gap-6 justify-center">
           <Button href="/contact" variant="primary" size="lg">
             REQUEST APPOINTMENT
