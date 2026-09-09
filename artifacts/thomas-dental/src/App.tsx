@@ -1,4 +1,5 @@
 import { Switch, Route } from "wouter";
+import { Analytics } from '@vercel/analytics/react';
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import Home from "@/pages/home";
@@ -27,6 +28,7 @@ export default function App() {
         </Switch>
       </main>
       <Footer />
+      <Analytics />
     </div>
   );
 }
