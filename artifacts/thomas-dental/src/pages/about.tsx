@@ -48,7 +48,7 @@ export default function AboutPage() {
             </h2>
             <div className="space-y-6 text-lg font-light leading-relaxed text-navy-700">
               <p>
-                I earned my Doctor of Dental Medicine degree from the University of Florida College of Dentistry in 2017. As a Florida native, I grew up in Coral Springs and attended Marjory Stoneman Douglas High School. For the past nine years, I have had the privilege of practicing across South Florida and caring for the people who make this community home.
+                I earned my Doctor of Dental Medicine degree from the University of Florida College of Dentistry in 2017. As a Florida native, I grew up in Coral Springs and attended Marjory Stoneman Douglas High School. For the past nine years, I have had the privilege of practicing across South Florida and caring for the people who make this community home. I have a deep passion for dentistry, and through hands-on continuing education and specialized training programs, I have developed an extensive skill set to better treat and care for my patients.
               </p>
               <p>
                 I love Florida living—the beaches, entertainment, and dining that make this place so special. My wife and I also love to travel and spend quality time with our nieces and nephews.

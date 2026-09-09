@@ -22,7 +22,7 @@ export default function Footer() {
               {practiceInfo.specialty}
             </p>
             <p className="text-navy-300 text-xs uppercase tracking-[0.2em]">
-              Boutique Private Dental Practice
+              Thoughtful, Modern Dental Care
             </p>
             <div className="flex gap-4">
                {/* Minimal social icons could go here */}
