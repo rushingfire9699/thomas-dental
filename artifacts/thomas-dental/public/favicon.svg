@@ -1,20 +1,16 @@
 <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <g stroke="#F5B33A" stroke-width="2.5" stroke-linecap="round">
-    <path d="M32 4V9" />
-    <path d="M32 55V60" />
-    <path d="M4 32H9" />
-    <path d="M55 32H60" />
-    <path d="M12.2 12.2L15.7 15.7" />
-    <path d="M48.3 48.3L51.8 51.8" />
-    <path d="M51.8 12.2L48.3 15.7" />
-    <path d="M15.7 48.3L12.2 51.8" />
-    <circle cx="32" cy="32" r="18" fill="#0B192C" />
+  <rect width="64" height="64" rx="12" fill="#0B192C" />
+  <g stroke="#F5B33A" stroke-width="2.2" stroke-linecap="round">
+    <path d="M32 8V13" />
+    <path d="M19.3 13.3L22.8 16.8" />
+    <path d="M44.7 13.3L41.2 16.8" />
+    <path d="M14 23H19" />
+    <path d="M50 23H45" />
+    <path d="M17 30C18.4 20.8 24.7 15 32 15C39.3 15 45.6 20.8 47 30" />
   </g>
-  <path
-    d="M25.2 25.5C26.1 22.8 29 21.8 32 24.2C35 21.8 37.9 22.8 38.8 25.5C40 29.1 37.2 31.2 36.2 34.2C35.3 37 35.2 42.1 33.3 42.7C31.8 43.2 31.2 37.2 29.8 37.2C28.4 37.2 27.8 43.2 26.3 42.7C24.4 42.1 24.3 37 23.4 34.2C22.4 31.2 24 29.1 25.2 25.5Z"
-    fill="#FFF9EC"
-    stroke="#F5B33A"
-    stroke-width="1.4"
-    stroke-linejoin="round"
-  />
+  <g stroke="#5AB0C6" stroke-width="2.4" stroke-linecap="round">
+    <path d="M9 36C15 32.5 21 32.5 27 36C33 39.5 39 39.5 45 36C49 33.7 53 33.2 57 34.5" />
+    <path d="M9 46C15 42.5 21 42.5 27 46C33 49.5 39 49.5 45 46C49 43.7 53 43.2 57 44.5" />
+    <path d="M16 54C21 51.2 26 51.2 31 54C36 56.8 41 56.8 46 54" />
+  </g>
 </svg>

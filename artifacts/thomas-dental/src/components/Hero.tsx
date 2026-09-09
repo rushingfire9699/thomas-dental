@@ -1,4 +1,5 @@
 import { Link } from "wouter";
+import CoastalLinework from "./CoastalLinework";
 
 interface HeroProps {
   title: string;
@@ -17,10 +18,9 @@ export default function Hero({
 }: HeroProps) {
   return (
     <section className="relative w-full h-[100svh] min-h-[700px] flex items-center justify-center overflow-hidden bg-sky-950 pt-20">
-      {/* Abstract wave/sun pattern background - subtle, geometric */}
+      {/* Subtle coastal linework keeps the open sky feeling intentional. */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-[20%] -right-[10%] w-[70%] h-[70%] rounded-full border-[1px] border-aqua-900/30 opacity-20 blur-[1px]" />
-        <div className="absolute top-[10%] -right-[5%] w-[50%] h-[50%] rounded-full border-[1px] border-sunrise-900/20 opacity-20 blur-[1px]" />
+        <CoastalLinework className="absolute -bottom-14 -right-24 h-[26rem] w-[32rem] text-aqua-100/15 sm:-bottom-16 sm:-right-12 sm:h-[31rem] sm:w-[38rem]" />
         
         {/* If we have an image, it overlays the pattern but keeps the navy tint */}
         {imageSrc && (
