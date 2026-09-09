@@ -48,10 +48,13 @@ export default function AboutPage() {
             </h2>
             <div className="space-y-6 text-lg font-light leading-relaxed text-navy-700">
               <p>
-                Dr. Thomas believes dental care should feel clear, personal, and unhurried. His goal is to build lasting relationships with patients while helping them feel at ease in the chair.
+                I earned my Doctor of Dental Medicine degree from the University of Florida College of Dentistry in 2017. As a Florida native, I grew up in Coral Springs and attended Marjory Stoneman Douglas High School. For the past nine years, I have had the privilege of practicing across South Florida and caring for the people who make this community home.
               </p>
               <p>
-                From a first conversation to ongoing preventive care, every visit is shaped around thoughtful communication, modern dentistry, and the details that make an experience feel genuinely comfortable.
+                I love Florida living—the beaches, entertainment, and dining that make this place so special. My wife and I also love to travel and spend quality time with our nieces and nephews.
+              </p>
+              <p>
+                I founded Thomas Dental because I wanted to offer patients a more transparent, thoughtful, and relaxed way to approach dentistry. Our practice is built around clear communication, the best labs and materials, and the latest technologies, all brought together to help you feel informed, comfortable, and confident in your care.
               </p>
             </div>
             <Link
