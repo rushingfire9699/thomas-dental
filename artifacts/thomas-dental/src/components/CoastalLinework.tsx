@@ -12,14 +12,16 @@ export default function CoastalLinework({ className = '' }: CoastalLineworkProps
       aria-hidden="true"
     >
       <g stroke="currentColor" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M292 338C287 278 287 207 305 107" strokeWidth="2.5" />
-        <path d="M302 166C252 143 199 111 150 62" strokeWidth="2.25" />
-        <path d="M298 198C244 195 188 216 137 264" strokeWidth="2.25" />
-        <path d="M303 139C325 91 361 53 402 28" strokeWidth="2.25" />
-        <path d="M300 215C344 199 385 172 414 137" strokeWidth="2.25" />
-        <path d="M300 112C282 92 272 71 268 47" strokeWidth="2.25" />
-        <path d="M284 300C235 284 190 285 145 303C111 316 74 320 32 309" strokeWidth="2" />
-        <path d="M284 323C239 312 193 316 147 330C103 343 61 343 18 328" strokeWidth="2" />
+        {/* Side-view palm emerging from the right edge. */}
+        <path d="M389 340C386 283 386 218 394 145" strokeWidth="2.5" />
+        <path d="M394 151C341 130 282 93 224 34" strokeWidth="2.25" />
+        <path d="M394 159C335 153 273 162 208 194" strokeWidth="2.25" />
+        <path d="M395 144C403 91 418 45 441 10" strokeWidth="2.25" />
+        <path d="M396 169C423 151 443 131 459 105" strokeWidth="2.25" />
+        <path d="M394 177C347 201 304 238 267 292" strokeWidth="2.25" />
+        <path d="M391 132C375 106 368 80 368 53" strokeWidth="2.25" />
+        <path d="M280 310C328 293 376 293 422 309C448 318 472 320 497 315" strokeWidth="2" />
+        <path d="M242 332C299 314 354 316 409 333C437 342 465 343 492 337" strokeWidth="2" />
       </g>
     </svg>
   );
