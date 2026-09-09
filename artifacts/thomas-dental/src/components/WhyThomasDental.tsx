@@ -5,22 +5,18 @@ export default function WhyThomasDental() {
     {
       title: 'Unyielding Standards',
       description: 'We never compromise on materials, techniques, or time. Every procedure is performed to the highest possible standard of clinical excellence.',
-      number: '01'
     },
     {
       title: 'Tranquil Environment',
       description: 'Our practice was deliberately designed to reduce clinical anxiety. From the lighting to the pacing of appointments, calmness is engineered into the experience.',
-      number: '02'
     },
     {
       title: 'Conservative Approach',
       description: 'We prioritize preserving your natural tooth structure. We will never recommend a complex procedure if a simpler, more conservative option exists.',
-      number: '03'
     },
     {
       title: 'Absolute Transparency',
       description: 'Clear communication regarding diagnoses, treatment options, and costs. No surprises, just collaborative decision-making.',
-      number: '04'
     }
   ];
 
@@ -39,8 +35,7 @@ export default function WhyThomasDental() {
               className="flex gap-6 items-start fade-in-up group"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="text-4xl font-display font-bold text-light-blue-gray group-hover:text-aqua-400 transition-colors duration-300">
-                {feature.number}
+              <div className="mt-2 h-3 w-3 shrink-0 rounded-full bg-sunrise-400 shadow-[0_0_0_6px_rgba(240,164,59,0.12)] transition-transform duration-300 group-hover:scale-125">
               </div>
               <div>
                 <h3 className="text-xl font-display font-bold text-navy-950 mb-3 tracking-wide uppercase">

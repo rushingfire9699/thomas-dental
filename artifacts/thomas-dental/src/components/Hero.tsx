@@ -16,7 +16,7 @@ export default function Hero({
   imageSrc,
 }: HeroProps) {
   return (
-    <section className="relative w-full h-[100svh] min-h-[700px] flex items-center justify-center overflow-hidden bg-navy-950 pt-20">
+    <section className="relative w-full h-[100svh] min-h-[700px] flex items-center justify-center overflow-hidden bg-sky-950 pt-20">
       {/* Abstract wave/sun pattern background - subtle, geometric */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
         <div className="absolute -top-[20%] -right-[10%] w-[70%] h-[70%] rounded-full border-[1px] border-aqua-900/30 opacity-20 blur-[1px]" />
@@ -26,15 +26,19 @@ export default function Hero({
         {imageSrc && (
           <div className="absolute inset-0 z-10">
             <div
-              className="absolute inset-0 bg-cover bg-center opacity-45 mix-blend-luminosity"
+              className="absolute inset-0 bg-cover bg-center opacity-75"
               style={{ backgroundImage: `url(${imageSrc})` }}
               role="img"
               aria-label="Hero background"
             />
-            <div className="absolute inset-0 bg-gradient-to-b from-navy-950/35 via-navy-950/60 to-navy-950/95" />
-            <div className="absolute inset-0 bg-aqua-900/20 mix-blend-multiply" />
+            <div className="absolute inset-0 bg-gradient-to-b from-sky-950/15 via-sky-950/35 to-sky-950/80" />
+            <div className="absolute inset-0 bg-sky-300/10 mix-blend-screen" />
           </div>
         )}
+        <svg className="absolute -bottom-8 -right-10 z-20 h-[48%] w-[45%] max-w-[460px] text-sky-100/35" viewBox="0 0 320 320" fill="none" aria-hidden="true">
+          <path d="M178 319C174 249 174 172 190 63" stroke="currentColor" strokeWidth="4" strokeLinecap="round" />
+          <path d="M185 166C128 135 72 108 16 54M179 202C117 200 61 226 12 279M188 123C214 70 258 31 310 12M179 211C235 193 282 158 316 119M190 94C169 53 139 22 102 5" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
+        </svg>
       </div>
 
       {/* Content */}
@@ -48,7 +52,7 @@ export default function Hero({
         
         <div className="w-24 h-1 bg-sunrise-400 mb-8 mx-auto" />
         
-        <p className="text-lg sm:text-xl text-navy-200 mb-12 max-w-2xl mx-auto font-sans font-light tracking-wide leading-relaxed">
+        <p className="text-lg sm:text-xl text-sky-50/90 mb-12 max-w-2xl mx-auto font-sans font-light tracking-wide leading-relaxed">
           {subtitle}
         </p>
         

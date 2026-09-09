@@ -42,6 +42,7 @@ A patient-facing website for Thomas Dental in Boca Raton, presenting the practic
 - Match typography, navy/aqua/gold palette, spacing, and overall visual character to the supplied branding reference.
 - Do not redesign the Thomas Dental logo.
 - Keep the homepage and patient journey feeling relaxed, coastal, sunlit, and welcoming while preserving the professional dental brand.
+- Prefer organic markers and open spacing over numbered step systems in patient-facing content.
 
 ## Gotchas
 
