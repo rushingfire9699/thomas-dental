@@ -75,9 +75,9 @@ export default function AboutPage() {
             </h2>
           </div>
           <div className="grid gap-6 md:grid-cols-3">
-            {values.map((value, index) => (
+            {values.map((value) => (
               <div key={value.title} className="border-t-2 border-aqua-400 bg-cream p-8 sm:p-10">
-                <span className="font-display text-sm font-bold tracking-[0.2em] text-sunrise-500">0{index + 1}</span>
+                <span className="block h-3 w-3 rounded-full bg-sunrise-400" aria-hidden="true" />
                 <h3 className="mb-4 mt-8 font-display text-xl font-bold uppercase tracking-wider text-navy-950">{value.title}</h3>
                 <p className="font-light leading-relaxed text-navy-700">{value.copy}</p>
               </div>

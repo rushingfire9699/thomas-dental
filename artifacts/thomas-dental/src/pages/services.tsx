@@ -3,7 +3,6 @@ import PageHero from '@/components/PageHero';
 import { practiceInfo } from '@/lib/practice-info';
 
 interface Procedure {
-  number: string;
   title: string;
   summary: string;
   explanation: string;
@@ -11,49 +10,41 @@ interface Procedure {
 
 const procedures: Procedure[] = [
   {
-    number: '01',
     title: 'Normal Cleanings',
     summary: 'A fresh, comfortable reset for your smile.',
     explanation: 'A routine professional cleaning gently removes everyday buildup, polishes your teeth, and gives us a chance to check in on your oral health. It is an easy way to keep your smile feeling clean and supported between visits.',
   },
   {
-    number: '02',
     title: 'Deep Cleanings',
     summary: 'Focused support for healthier gums.',
     explanation: 'Sometimes your gums benefit from a more focused cleaning. This visit carefully removes buildup around the gumline and in harder-to-reach areas, helping create a healthier environment for your smile.',
   },
   {
-    number: '03',
     title: 'Fillings',
     summary: 'Small repairs that help teeth stay strong.',
     explanation: 'When a tooth needs a little support, a tooth-colored filling can restore its shape and function. We gently prepare the area, place the custom-shaded material, and smooth it so your bite feels natural.',
   },
   {
-    number: '04',
     title: 'Crowns',
     summary: 'A custom layer of protection for a tooth.',
     explanation: 'A crown is a carefully made restoration that fits over a tooth needing additional strength or coverage. It is shaped to work comfortably with your bite and blend naturally with your smile.',
   },
   {
-    number: '05',
     title: 'Root Canals',
     summary: 'Comfort-focused care that preserves a natural tooth.',
     explanation: 'When the inner part of a tooth is irritated and cannot recover on its own, this treatment gently removes the affected tissue, cleans the inside, and seals the tooth so it can continue to function.',
   },
   {
-    number: '06',
     title: 'Implants',
     summary: 'A stable, natural-looking way to replace a tooth.',
     explanation: 'An implant replaces the root of a missing tooth and can support a custom crown. Treatment is planned in stages around your health, comfort, and long-term goals, with clear guidance at every step.',
   },
   {
-    number: '07',
     title: 'Oral Surgery',
     summary: 'Thoughtful surgical care when extra support is needed.',
     explanation: 'Some smiles benefit from a minor surgical procedure involving a tooth or nearby tissue. We explain the reason for care, what to expect, and how we will support a smooth recovery before moving forward.',
   },
   {
-    number: '08',
     title: 'Clear Aligners',
     summary: 'A subtle way to guide your smile into alignment.',
     explanation: 'Clear aligners use a series of removable trays to gradually guide teeth toward a more comfortable, balanced position. Your plan is designed around your smile and your everyday routine.',
@@ -87,7 +78,7 @@ export default function ServicesPage() {
                 className="group overflow-hidden border border-aqua-200 bg-white transition-shadow open:shadow-xl"
               >
                 <summary className="flex cursor-pointer list-none items-center gap-5 px-6 py-6 marker:hidden sm:px-8 [&::-webkit-details-marker]:hidden">
-                  <span className="font-display text-sm font-bold tracking-[0.2em] text-sunrise-500">{procedure.number}</span>
+                  <span className="h-3 w-3 shrink-0 rounded-full bg-sunrise-400 shadow-[0_0_0_6px_rgba(240,164,59,0.12)]" aria-hidden="true" />
                   <span className="min-w-0 flex-1">
                     <span className="block font-display text-lg font-bold uppercase tracking-wider text-navy-950 sm:text-xl">{procedure.title}</span>
                     <span className="mt-1 block text-sm font-light text-navy-600">{procedure.summary}</span>

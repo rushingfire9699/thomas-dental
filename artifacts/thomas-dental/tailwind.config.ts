@@ -10,6 +10,19 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        sky: {
+          50: '#f3fbfd',
+          100: '#e1f5f8',
+          200: '#c3e9ef',
+          300: '#96d6e1',
+          400: '#65bfd0',
+          500: '#3da3ba',
+          600: '#2d829b',
+          700: '#27697f',
+          800: '#24566a',
+          900: '#214a5a',
+          950: '#193d4e',
+        },
         navy: {
           50: '#eef2f6',
           100: '#d5e0ec',
@@ -51,7 +64,7 @@ const config: Config = {
         },
         cream: '#fcfbf8',
         'off-white': '#f5f5f5',
-        'light-blue-gray': '#d5e0ec',
+        'light-blue-gray': '#c3e9ef',
         gold: '#f0a43b' // mapped to sunrise 400
       },
       fontFamily: {
