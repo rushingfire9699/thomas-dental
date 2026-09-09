@@ -54,7 +54,7 @@ export default function AboutPage() {
                 I love Florida living—the beaches, entertainment, and dining that make this place so special. My wife and I also love to travel and spend quality time with our nieces and nephews.
               </p>
               <p>
-                I founded Thomas Dental because I wanted to offer patients a more transparent, thoughtful, and relaxed way to approach dentistry. Our practice is built around clear communication, the best labs and materials, and the latest technologies, all brought together to help you feel informed, comfortable, and confident in your care.
+                I founded Thomas Dental because I wanted to offer patients a more transparent, thoughtful, and relaxed way to approach dentistry. Our practice is built around clear communication, the best labs and materials, and the latest technologies, all brought together to help you feel informed, comfortable, and confident in your care. Thomas Dental was founded on trust, and here, you are part of the Thomas family.
               </p>
             </div>
             <Link
