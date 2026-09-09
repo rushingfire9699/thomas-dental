@@ -1,5 +1,4 @@
 import { FormEvent, useState } from 'react';
-import { practiceInfo } from '@/lib/practice-info';
 
 type ContactFormValues = {
   name: string;
@@ -19,29 +18,38 @@ const initialValues: ContactFormValues = {
 
 export default function ContactForm() {
   const [values, setValues] = useState<ContactFormValues>(initialValues);
-  const [submitted, setSubmitted] = useState(false);
+  const [submissionState, setSubmissionState] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
+  const [errorMessage, setErrorMessage] = useState('');
 
   function updateField(field: keyof ContactFormValues, value: string) {
-    setSubmitted(false);
+    setSubmissionState('idle');
+    setErrorMessage('');
     setValues((current) => ({ ...current, [field]: value }));
   }
 
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
+    setSubmissionState('sending');
+    setErrorMessage('');
 
-    const subject = `New patient message from ${values.name}`;
-    const body = [
-      `Name: ${values.name}`,
-      `Phone: ${values.phone}`,
-      `Email: ${values.email}`,
-      `Preferred contact method: ${values.preferredContact}`,
-      '',
-      'Concern or question:',
-      values.concern,
-    ].join('\n');
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(values),
+      });
+      const result = (await response.json()) as { error?: string };
 
-    setSubmitted(true);
-    window.location.href = `mailto:${practiceInfo.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      if (!response.ok) {
+        throw new Error(result.error || 'We could not send your message right now.');
+      }
+
+      setSubmissionState('success');
+      setValues(initialValues);
+    } catch (error) {
+      setSubmissionState('error');
+      setErrorMessage(error instanceof Error ? error.message : 'We could not send your message right now.');
+    }
   }
 
   const fieldClassName =
@@ -132,19 +140,26 @@ export default function ContactForm() {
 
         <div className="flex flex-col items-start gap-4 md:col-span-2 sm:flex-row sm:items-center sm:justify-between">
           <p className="max-w-xl text-sm font-light leading-relaxed text-navy-600">
-            Submitting opens your email app with your message addressed to {practiceInfo.email}.
+            Your message will be sent directly to our team.
           </p>
           <button
             type="submit"
+            disabled={submissionState === 'sending'}
             className="inline-flex shrink-0 bg-sunrise-400 px-8 py-4 font-display text-xs font-bold uppercase tracking-[0.2em] text-navy-950 shadow-[4px_4px_0px_0px_rgba(11,25,44,1)] transition hover:translate-x-1 hover:translate-y-1 hover:bg-sunrise-300 hover:shadow-[2px_2px_0px_0px_rgba(11,25,44,1)]"
           >
-            Prepare My Message
+            {submissionState === 'sending' ? 'Sending...' : 'Send My Message'}
           </button>
         </div>
 
-        {submitted && (
+        {submissionState === 'success' && (
           <p className="md:col-span-2 text-sm font-medium text-aqua-800" role="status" aria-live="polite">
-            Your email app should be opening with your message ready to send.
+            Thanks — your message has been sent. We&apos;ll be in touch soon.
+          </p>
+        )}
+
+        {submissionState === 'error' && (
+          <p className="md:col-span-2 text-sm font-medium text-red-700" role="alert">
+            {errorMessage}
           </p>
         )}
       </form>
