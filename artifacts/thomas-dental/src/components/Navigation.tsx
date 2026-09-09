@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'wouter';
 import Button from './Button';
+import { practiceInfo } from '@/lib/practice-info';
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -55,10 +56,10 @@ export default function Navigation() {
               </Link>
             ))}
             <a
-              href="tel:+15615551234"
+              href={practiceInfo.phoneHref}
               className="text-xs font-semibold text-aqua-400 hover:text-white transition-colors duration-300 tracking-wider"
             >
-              (561) 555-1234
+              {practiceInfo.phoneDisplay}
             </a>
             <Button href="/contact" variant="primary" size="sm">
               REQUEST APPOINTMENT
@@ -112,10 +113,10 @@ export default function Navigation() {
               </Link>
             ))}
             <a
-              href="tel:+15615551234"
+              href={practiceInfo.phoneHref}
               className="block px-3 py-3 text-sm font-semibold text-aqua-400 tracking-wider hover:bg-navy-800 transition-colors"
             >
-              (561) 555-1234
+              {practiceInfo.phoneDisplay}
             </a>
             <div className="px-3 pt-4">
               <Button href="/contact" variant="primary" size="md" fullWidth>

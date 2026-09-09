@@ -1,4 +1,5 @@
 import Button from './Button';
+import { practiceInfo } from '@/lib/practice-info';
 
 export default function FinalCTA() {
   return (
@@ -26,8 +27,8 @@ export default function FinalCTA() {
           <Button href="/contact" variant="primary" size="lg">
             REQUEST APPOINTMENT
           </Button>
-          <Button href="tel:+15615551234" variant="outline" size="lg">
-            CALL (561) 555-1234
+          <Button href={practiceInfo.phoneHref} variant="outline" size="lg" external>
+            CALL {practiceInfo.phoneDisplay}
           </Button>
         </div>
       </div>
