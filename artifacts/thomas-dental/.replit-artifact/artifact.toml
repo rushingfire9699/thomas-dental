@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Thomas Dental"
+description = "A polished dental practice website for Thomas Dental in Boca Raton, featuring services, practice information, patient guidance, reviews, location details, and appointment contact pathways."
+version = "1.0.0"
+id = "artifacts/thomas-dental"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 19038
+
+[services.development]
+run = "pnpm --filter @workspace/thomas-dental run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/thomas-dental", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/thomas-dental/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "19038"
+BASE_PATH = "/"
