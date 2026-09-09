@@ -12,6 +12,18 @@ const preferredContactMethods = new Set<ContactFormPayload['preferredContact']>(
   'Text',
 ]);
 
+type RuntimeFetch = (
+  input: string,
+  init?: {
+    method?: string;
+    headers?: Record<string, string>;
+    body?: string;
+  },
+) => Promise<{
+  ok: boolean;
+  status: number;
+}>;
+
 function asTrimmedString(value: unknown) {
   return typeof value === 'string' ? value.trim() : '';
 }
@@ -49,15 +61,21 @@ export function parseContactFormPayload(input: unknown): ContactFormPayload | nu
 }
 
 export async function sendContactEmail(payload: ContactFormPayload) {
-  const apiKey = process.env.RESEND_API_KEY;
-  const from = process.env.RESEND_FROM_EMAIL;
-  const to = process.env.CONTACT_TO_EMAIL || 'info@thomasdentalflorida.com';
+  const runtime = globalThis as typeof globalThis & {
+    process?: { env?: Record<string, string | undefined> };
+    fetch?: RuntimeFetch;
+  };
+  const env = runtime.process?.env ?? {};
+  const apiKey = env.RESEND_API_KEY;
+  const from = env.RESEND_FROM_EMAIL;
+  const to = env.CONTACT_TO_EMAIL || 'info@thomasdentalflorida.com';
+  const fetcher = runtime.fetch;
 
-  if (!apiKey || !from) {
+  if (!apiKey || !from || !fetcher) {
     throw new Error('Resend email configuration is missing');
   }
 
-  const response = await fetch('https://api.resend.com/emails', {
+  const response = await fetcher('https://api.resend.com/emails', {
     method: 'POST',
     headers: {
       Authorization: `Bearer ${apiKey}`,
