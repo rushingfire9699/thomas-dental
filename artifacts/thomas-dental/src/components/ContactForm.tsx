@@ -114,6 +114,7 @@ export default function ContactForm() {
             <option value="" disabled>Select one</option>
             <option value="Phone">Phone</option>
             <option value="Email">Email</option>
+            <option value="Text">Text</option>
           </select>
         </label>
 
