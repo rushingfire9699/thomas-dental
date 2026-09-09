@@ -10,14 +10,9 @@ interface Procedure {
 
 const procedures: Procedure[] = [
   {
-    title: 'Normal Cleanings',
-    summary: 'A fresh, comfortable reset for your smile.',
-    explanation: 'A routine professional cleaning gently removes everyday buildup, polishes your teeth, and gives us a chance to check in on your oral health. It is an easy way to keep your smile feeling clean and supported between visits.',
-  },
-  {
-    title: 'Deep Cleanings',
-    summary: 'Focused support for healthier gums.',
-    explanation: 'Sometimes your gums benefit from a more focused cleaning. This visit carefully removes buildup around the gumline and in harder-to-reach areas, helping create a healthier environment for your smile.',
+    title: 'Porcelain Veneers',
+    summary: 'A refined way to shape color, proportion, and symmetry.',
+    explanation: 'Porcelain veneers are thin, custom-made restorations designed to enhance the appearance of your smile while preserving as much natural tooth structure as possible. We take time to understand your goals, then plan the shade, shape, and proportions so your result feels natural and personal.',
   },
   {
     title: 'Fillings',
@@ -48,6 +43,11 @@ const procedures: Procedure[] = [
     title: 'Clear Aligners',
     summary: 'A subtle way to guide your smile into alignment.',
     explanation: 'Clear aligners use a series of removable trays to gradually guide teeth toward a more comfortable, balanced position. Your plan is designed around your smile and your everyday routine.',
+  },
+  {
+    title: 'Smile Makeovers',
+    summary: 'A thoughtful plan for a more balanced, confident smile.',
+    explanation: 'A smile makeover begins with a conversation about what you would like to change and what you want to preserve. Using advanced digital dentistry, we can carefully plan proportions, shape, shade, and balance for more precise esthetics. Each step is coordinated around your facial features, function, and goals—not a one-size-fits-all template.',
   },
 ];
 
