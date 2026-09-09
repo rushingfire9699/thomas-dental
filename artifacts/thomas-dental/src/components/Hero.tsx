@@ -26,18 +26,22 @@ export default function Hero({
         {imageSrc && (
           <div className="absolute inset-0 z-10">
             <div
-              className="absolute inset-0 bg-cover bg-center mix-blend-overlay opacity-30"
+              className="absolute inset-0 bg-cover bg-center opacity-45 mix-blend-luminosity"
               style={{ backgroundImage: `url(${imageSrc})` }}
               role="img"
               aria-label="Hero background"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/80 to-navy-950/40" />
+            <div className="absolute inset-0 bg-gradient-to-b from-navy-950/35 via-navy-950/60 to-navy-950/95" />
+            <div className="absolute inset-0 bg-aqua-900/20 mix-blend-multiply" />
           </div>
         )}
       </div>
 
       {/* Content */}
       <div className="relative z-20 max-w-5xl mx-auto px-6 sm:px-8 lg:px-12 flex flex-col items-center text-center fade-in-up">
+        <p className="mb-6 font-display text-xs font-bold uppercase tracking-[0.3em] text-aqua-300">
+          Boca Raton · Florida
+        </p>
         <h1 className="text-4xl sm:text-5xl lg:text-7xl font-display font-bold text-white mb-8 leading-[1.1] tracking-wider uppercase">
           {title}
         </h1>

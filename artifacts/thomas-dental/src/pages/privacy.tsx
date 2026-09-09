@@ -1,22 +1,30 @@
-import { Link } from "wouter";
+import PageHero from '@/components/PageHero';
+import { practiceInfo } from '@/lib/practice-info';
 
 export default function PrivacyPage() {
   return (
-    <div className="min-h-screen pt-24 pb-20">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 className="text-5xl sm:text-6xl font-serif font-bold text-navy-950 mb-8">
-          Privacy Policy
-        </h1>
-        <p className="text-xl text-navy-700 mb-6">
-          This page is under development. Privacy policy coming soon.
-        </p>
-        <Link
-          href="/"
-          className="inline-flex items-center justify-center px-6 py-3 bg-navy-950 text-off-white font-semibold rounded-lg hover:bg-navy-900 transition-all"
-        >
-          Back to Home
-        </Link>
-      </div>
+    <div className="bg-cream">
+      <PageHero
+        eyebrow="Thomas Dental"
+        title="Privacy policy"
+        subtitle="A straightforward overview of how this informational website handles your privacy."
+      />
+      <article className="mx-auto max-w-4xl px-6 py-20 sm:px-8 sm:py-28">
+        <div className="space-y-10 text-lg font-light leading-relaxed text-navy-700">
+          <section>
+            <h2 className="mb-4 font-display text-2xl font-bold uppercase tracking-wider text-navy-950">Information you choose to share</h2>
+            <p>This website provides phone, email, and appointment-request links. If you contact Thomas Dental by phone or email, the information you provide is used to respond to your request and coordinate care.</p>
+          </section>
+          <section>
+            <h2 className="mb-4 font-display text-2xl font-bold uppercase tracking-wider text-navy-950">Website activity</h2>
+            <p>Like most websites, basic technical information may be processed by the hosting and map services used to deliver pages, such as browser type, device information, and pages requested. The embedded map may also be subject to Google&apos;s privacy practices.</p>
+          </section>
+          <section>
+            <h2 className="mb-4 font-display text-2xl font-bold uppercase tracking-wider text-navy-950">Questions</h2>
+            <p>If you have a question about privacy or how your information is handled, contact the practice at <a className="text-aqua-700 underline underline-offset-4" href={`mailto:${practiceInfo.email}`}>{practiceInfo.email}</a> or {practiceInfo.phoneDisplay}.</p>
+          </section>
+        </div>
+      </article>
     </div>
   );
 }

@@ -36,10 +36,14 @@ export default function ContactPage() {
             </div>
             <div>
               <p className="mb-2 text-xs font-bold uppercase tracking-[0.2em] text-sunrise-400">Office Hours</p>
-              <p className="text-lg leading-relaxed">
-                {practiceInfo.weekdayHours}<br />
-                {practiceInfo.fridayHours}
-              </p>
+              <dl className="space-y-2 text-lg leading-relaxed">
+                {practiceInfo.officeHours.map(([day, hours]) => (
+                  <div key={day} className="flex gap-4">
+                    <dt className="w-24 text-navy-200">{day}</dt>
+                    <dd>{hours}</dd>
+                  </div>
+                ))}
+              </dl>
             </div>
             <Link href="/" className="inline-flex border-b border-aqua-400 pb-1 text-xs font-bold uppercase tracking-[0.2em] text-aqua-400 hover:text-white">
               Back to Home

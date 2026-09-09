@@ -12,10 +12,11 @@ export default function Home() {
   return (
     <>
       <Hero
-        title="Personalized Dentistry. Thoughtfully Delivered."
-        subtitle="Thomas Dental provides comprehensive dental care in a relaxed, personalized setting in Boca Raton, Florida."
+        title="Thoughtful dentistry. A more relaxed way to smile."
+        subtitle="General and cosmetic dentistry in a calm Boca Raton setting—personalized care with a little more ease."
         primaryCTA={{ label: 'REQUEST AN APPOINTMENT', href: '/contact' }}
         secondaryCTA={{ label: 'MEET DR. THOMAS', href: '/about' }}
+        imageSrc="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=85&w=2200&auto=format&fit=crop"
       />
       <BrandIntroduction />
       <MeetDrThomas />

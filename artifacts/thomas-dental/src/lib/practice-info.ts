@@ -9,8 +9,13 @@ export const practiceInfo = {
   addressLine1: '1590 NW 10th Ave #400',
   addressLine2: 'Boca Raton, FL 33486',
   fullAddress: '1590 NW 10th Ave #400, Boca Raton, FL 33486',
-  weekdayHours: 'Monday – Thursday: 8:00 AM – 4:00 PM',
-  fridayHours: 'Friday: 8:00 AM – 12:00 PM',
+  officeHours: [
+    ['Monday', '8:00 AM – 4:00 PM'],
+    ['Tuesday', '8:00 AM – 4:00 PM'],
+    ['Wednesday', '8:00 AM – 4:00 PM'],
+    ['Thursday', '8:00 AM – 4:00 PM'],
+    ['Friday', '8:00 AM – 12:00 PM'],
+  ],
   tagline: 'Exceptional Care for Every Smile in Your Family.',
 } as const;
 

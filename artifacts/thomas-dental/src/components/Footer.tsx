@@ -66,14 +66,12 @@ export default function Footer() {
               Office Hours
             </h4>
             <ul className="space-y-6 text-sm font-sans font-light text-navy-100">
-              <li>
-                <span className="block text-white font-medium mb-1 uppercase tracking-wider text-xs">Monday – Thursday</span>
-                8:00 AM – 4:00 PM
-              </li>
-              <li>
-                <span className="block text-white font-medium mb-1 uppercase tracking-wider text-xs">Friday</span>
-                8:00 AM – 12:00 PM
-              </li>
+              {practiceInfo.officeHours.map(([day, hours]) => (
+                <li key={day} className="flex gap-3">
+                  <span className="w-24 text-white font-medium uppercase tracking-wider text-xs">{day}</span>
+                  <span>{hours}</span>
+                </li>
+              ))}
               <li>
                 <a
                   href={practiceInfo.websiteHref}

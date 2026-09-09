@@ -38,10 +38,14 @@ export default function LocationSection() {
                 </svg>
                 <div>
                   <h4 className="font-display font-bold text-navy-950 uppercase tracking-widest text-sm mb-1">Office Hours</h4>
-                  <p className="text-navy-600 font-sans text-sm leading-relaxed">
-                    {practiceInfo.weekdayHours}<br />
-                    {practiceInfo.fridayHours}
-                  </p>
+                  <dl className="space-y-1 text-sm leading-relaxed text-navy-600">
+                    {practiceInfo.officeHours.map(([day, hours]) => (
+                      <div key={day} className="flex gap-3">
+                        <dt className="w-20 font-medium text-navy-800">{day}</dt>
+                        <dd>{hours}</dd>
+                      </div>
+                    ))}
+                  </dl>
                 </div>
               </div>
             </div>
