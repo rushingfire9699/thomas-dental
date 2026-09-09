@@ -35,10 +35,6 @@ export default function Hero({
             <div className="absolute inset-0 bg-sky-300/10 mix-blend-screen" />
           </div>
         )}
-        <svg className="absolute -bottom-8 -right-10 z-20 h-[48%] w-[45%] max-w-[460px] text-sky-100/35" viewBox="0 0 320 320" fill="none" aria-hidden="true">
-          <path d="M178 319C174 249 174 172 190 63" stroke="currentColor" strokeWidth="4" strokeLinecap="round" />
-          <path d="M185 166C128 135 72 108 16 54M179 202C117 200 61 226 12 279M188 123C214 70 258 31 310 12M179 211C235 193 282 158 316 119M190 94C169 53 139 22 102 5" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
-        </svg>
       </div>
 
       {/* Content */}
