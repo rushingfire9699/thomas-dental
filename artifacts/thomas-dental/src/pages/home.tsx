@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <>
       <Hero
-        title="Thoughtful dentistry. A more relaxed way to smile."
+        title="Good dentistry starts with trust."
         subtitle="We’re here to make your next visit feel easy."
         primaryCTA={{ label: 'REQUEST AN APPOINTMENT', href: '/contact' }}
         secondaryCTA={{ label: 'MEET DR. THOMAS', href: '/about' }}
