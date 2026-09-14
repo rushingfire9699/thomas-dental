@@ -12,31 +12,22 @@ export default function BrandIntroduction() {
           
           <div className="fade-in-up">
             <SectionHeader
-              title="Your visit, with a little more ease"
+              title="A Dental Office That Feels Like Yours"
               alignment="left"
             />
             <div className="space-y-6 text-navy-700 font-sans font-light leading-relaxed text-lg">
               <p>
-                A dental visit can feel calm, personal, and even a little restorative. At Thomas Dental, every detail is designed to help you feel comfortable, heard, and confident in your care.
+                We want Thomas Dental to be the kind of place you’re happy to come back to — where you know the people taking care of you, never feel rushed, and always feel comfortable asking questions.
               </p>
               <p>
-                Our Boca Raton practice pairs thoughtful conversation with modern dentistry, creating an experience that feels less rushed and more like a breath of fresh air.
+                We believe the best dentistry starts with trust. That means taking the time to listen, explaining things clearly, and recommending the same thoughtful care we would want for our own families.
               </p>
               <p>
-                From preventive care to cosmetic and restorative treatments, our approach is clear, conservative, and tailored to your smile.
+                Whether you’re here for a routine visit or something more involved, you can expect excellent dentistry, genuine attention to detail, and a team that truly cares about making you feel at home.
               </p>
-            </div>
-            
-            <div className="mt-12 flex items-center gap-6">
-               <div className="w-16 h-16 rounded-full bg-navy-50 flex items-center justify-center shrink-0">
-                  <svg className="w-8 h-8 text-sunrise-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 13l4 4L19 7" />
-                  </svg>
-               </div>
-               <div>
-                 <h4 className="font-display font-bold text-navy-950 uppercase tracking-widest text-sm mb-1">Our Promise</h4>
-                  <p className="text-navy-600 font-sans text-sm">A brighter visit from the moment you arrive.</p>
-               </div>
+              <p className="font-medium text-navy-950">
+                Great dentistry. Familiar faces. Care you can trust.
+              </p>
             </div>
           </div>
           
