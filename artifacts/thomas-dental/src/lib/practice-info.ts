@@ -14,7 +14,7 @@ export const practiceInfo = {
     ['Tuesday', '8:00 AM – 4:00 PM'],
     ['Wednesday', '8:00 AM – 4:00 PM'],
     ['Thursday', '8:00 AM – 4:00 PM'],
-    ['Friday', 'By appointment only'],
+    ['Friday', 'By Appointment Only'],
   ],
   tagline: 'Exceptional Care for Every Smile in Your Family.',
 } as const;
