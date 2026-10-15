@@ -12,21 +12,15 @@ export default function BrandIntroduction() {
           
           <div className="fade-in-up">
             <SectionHeader
-              title="A Dental Office That Feels Like Yours"
+              title="A New Chapter, Same Commitment to Care"
               alignment="left"
             />
             <div className="space-y-6 text-navy-700 font-sans font-light leading-relaxed text-lg">
               <p>
-                We want Thomas Dental to be the kind of place you’re happy to come back to — where you know the people taking care of you, never feel rushed, and always feel comfortable asking questions.
-              </p>
-              <p>
-                We believe the best dentistry starts with trust. That means taking the time to listen, explaining things clearly, and recommending the same thoughtful care we would want for our own families.
-              </p>
-              <p>
-                Whether you’re here for a routine visit or something more involved, you can expect excellent dentistry, genuine attention to detail, and a team that truly cares about making you feel at home.
+                After more than 51 years of dedicated service to our community, Dr. George Karr has entrusted me with the privilege of continuing the practice he has built. I am incredibly grateful for this opportunity and excited to carry on his legacy of providing exceptional, personalized dental care. As we begin this new chapter as Thomas Dental, my goal is simple: to treat every patient with the same kindness, honesty, and respect that I would want for my own family. I look forward to getting to know each of you, building lasting relationships, and creating an environment where you always feel comfortable, heard, and confident in your care. While the name may be changing, our commitment to putting patients first remains the same.
               </p>
               <p className="font-medium text-navy-950">
-                Great dentistry. Familiar faces. Care you can trust.
+                — Dr. Chase Thomas
               </p>
             </div>
           </div>
@@ -34,7 +28,7 @@ export default function BrandIntroduction() {
           <div className="relative fade-in-up" style={{ animationDelay: '0.2s' }}>
             {/* Image Placeholder with brand styling */}
             <div className="aspect-[4/5] bg-navy-900 relative shadow-2xl overflow-hidden">
-               <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=1974&auto=format&fit=crop')] bg-cover bg-center opacity-75" />
+               <div className="absolute inset-0 bg-[url('/dr-george-karr-and-chase-thomas.png')] bg-cover bg-center opacity-75" />
                <div className="absolute inset-0 bg-gradient-to-tr from-navy-950/75 via-navy-950/10 to-aqua-900/10" />
                
                {/* Decorative border frame */}
